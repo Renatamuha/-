@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Для Алины - Страничка 1</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf6f8; /* Очень нежный светло-розовый фон */
+            color: #4a4a4a; /* Темно-серый для основного текста */
+            margin: 0;
+            padding: 20px; /* Отступы для всей страницы */
+            line-height: 1.7; /* Улучшенный межстрочный интервал */
+        }
+
+        .container {
+            max-width: 850px; /* Максимальная ширина контента */
+            margin: 40px auto; /* Центрирование контейнера и отступы сверху/снизу */
+            background-color: #ffffff; /* Белый фон для блока контента */
+            padding: 30px 40px; /* Внутренние отступы в контейнере */
+            border-radius: 12px; /* Скругленные углы */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Мягкая тень для объема */
+        }
+
+        h1 {
+            color: #e75480; /* Яркий, но нежный розовый для заголовка */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.8em; /* Увеличим заголовок */
+            font-weight: 300; /* Более легкий шрифт, если доступен */
+        }
+
+        p {
+            font-size: 1.15em; /* Чуть крупнее текст абзацев */
+            margin-bottom: 20px;
+            color: #5c5c5c; /* Немного светлее, чем основной текст */
+        }
+
+        .image-gallery {
+            display: flex; /* Используем flexbox для расположения картинок */
+            flex-wrap: wrap; /* Позволяем картинкам переноситься на новую строку */
+            gap: 20px; /* Пространство между картинками */
+            justify-content: center; /* Центрируем картинки */
+            margin-top: 35px;
+            margin-bottom: 35px;
+            padding: 15px;
+            background-color: #fdf6f8; /* Легкий фон для галереи */
+            border-radius: 8px;
+        }
+
+        .image-gallery img {
+            max-width: 100%; /* Чтобы картинка не вылезала за пределы своего блока */
+            width: calc(33.333% - 20px); /* Стараемся разместить по 3 в ряд, учитывая gap */
+            min-width: 200px; /* Минимальная ширина, чтобы не слишком сжимались */
+            height: auto; /* Сохраняем пропорции */
+            border-radius: 8px; /* Скругляем углы у картинок */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Легкая тень для картинок */
+            object-fit: cover; /* Чтобы картинки красиво заполняли пространство (может обрезать) */
+            aspect-ratio: 1 / 1; /* Делаем картинки квадратными, можно изменить на 4/3, 16/9 и т.д. */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05); /* Небольшое увеличение при наведении */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .link-container {
+            text-align: center; /* Центрируем кнопку-ссылку */
+            margin-top: 40px;
+        }
+
+        .nav-link {
+            display: inline-block; /* Чтобы можно было задать padding и т.д. */
+            background-color: #e75480; /* Тот же цвет, что у заголовка */
+            color: white !important; /* Белый текст, !important для переопределения стандартного цвета ссылки */
+            padding: 12px 25px;
+            border-radius: 25px; /* Сильно скругленные углы для "кнопки" */
+            text-decoration: none; /* Убираем подчеркивание */
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #d1426e; /* Чуть темнее при наведении */
+            text-decoration: none;
+            transform: translateY(-2px); /* Небольшой сдвиг вверх при наведении */
+        }
+
+        /* Адаптивность для изображений на маленьких экранах */
+        @media (max-width: 768px) {
+            .image-gallery img {
+                width: calc(50% - 15px); /* По 2 в ряд на планшетах */
+            }
+            h1 {
+                font-size: 2.2em;
+            }
+             p {
+                font-size: 1em;
+            }
+        }
+        @media (max-width: 480px) {
+            .image-gallery img {
+                width: 100%; /* По 1 в ряд на телефонах */
+            }
+             .container {
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать на страничку 1</h1>
+        <p>Я хочу сказать тебе спасибо за все наши приключения, спонтанные и организованные. Благодаря тебе в моей жизни 
+            было очень много веселья, душевных разговоров и улыбок!!
+        </p>
+
+        <!-- Галерея изображений -->
+        <div class="image-gallery">
+            <img src="АЛИНА 3.jpg" alt="Воспоминание 1">
+            <img src="АЛИНА 4.jpg" alt="Воспоминание 2">
+            <img src="алина 5.jpg" alt="Воспоминание 3"> 
+            <!-- Убедитесь, что имена файлов ТОЧНО совпадают, включая регистр букв! -->
+            <!-- Если нужно больше картинок, просто добавьте еще теги <img> сюда -->
+        </div>
+
+        <div class="link-container">
+            <a href="index.html">Вернуться на Главную</a>
+<a href="stranica2.html.html">Перейти на Страничку 2</a>
+        </div>
+    </div>
+</body>
+</html>

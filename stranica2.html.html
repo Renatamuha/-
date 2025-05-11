@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Для Алины - Наши Поездки</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f5ff; /* Нежный светло-голубой фон */
+            color: #3a3a3a;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            color: #4a7dc7; /* Приятный синий для заголовка */
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.8em;
+            font-weight: 300;
+        }
+
+        p, .trip-description {
+            font-size: 1.15em;
+            margin-bottom: 20px;
+            color: #505050;
+        }
+
+        .trip-moment {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #f9faff; /* Очень легкий фон для блока воспоминания */
+            border-radius: 8px;
+            border-left: 4px solid #7ba2e0; /* Акцентная полоска слева */
+        }
+
+        .trip-moment img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 15px;
+            display: block; /* Чтобы margin auto работал для центрирования, если нужно */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .image-pair {
+            display: flex;
+            gap: 15px; /* Пространство между парными картинками */
+            margin-bottom: 15px;
+            justify-content: center; /* Центрируем, если картинки меньше */
+        }
+
+        .image-pair img {
+            width: calc(50% - 7.5px); /* Каждая картинка занимает половину минус половина gap */
+            max-width: 350px; /* Ограничение максимальной ширины для парных */
+            margin-bottom: 0; /* Убираем нижний отступ, т.к. он есть у .image-pair */
+        }
+
+
+        .link-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            background-color: #4a7dc7; /* Синий для кнопок */
+            color: white !important;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin: 0 10px; /* Отступы между кнопками */
+        }
+
+        .nav-link:hover {
+            background-color: #3a68a8; /* Темнее при наведении */
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2em;
+            }
+            p, .trip-description {
+                font-size: 1em;
+            }
+            .image-pair {
+                flex-direction: column; /* Картинки друг под другом на маленьких экранах */
+                align-items: center;
+            }
+            .image-pair img {
+                width: 90%; /* Шире в колонке */
+                max-width: 400px;
+                margin-bottom: 15px; /* Добавляем отступ снизу, когда они в колонке */
+            }
+            .image-pair img:last-child {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 480px) {
+             .container {
+                padding: 20px;
+            }
+            .nav-link {
+                display: block; /* Кнопки на всю ширину */
+                margin: 10px 0; /* Отступы сверху/снизу */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Наши Поездки!</h1>
+        <p>Я обожаю наши совместные вылазки, каждая из них — это маленькое приключение!</p>
+
+        <div class="trip-moment">
+            <h2>Поездка в Уфу</h2>
+            <p class="trip-description">Наша вторая совместная поездка в Уфу была очень суперской, такой же классной, как и первая. Это фото – как мы сели в машину BlaBlaCar в предвкушении нашей зимней сказки!</p>
+            <img src="Алина 7.jpg" alt="Поездка в Уфу на машине"> 
+            <!-- Убедитесь, что имя файла Алина 7.jpg и оно в той же папке -->
+        </div>
+
+        <div class="trip-moment">
+            <h2>Прогулки и Фото</h2>
+            <p class="trip-description">Люблю, как мы нахаживаем много шагов в других городах, исследуем все уголки и делаем кучу фотографий, хи-хи!</p>
+            <img src="Алина 6.jpg" alt="Прогулка по городу">
+            <!-- Убедитесь, что имя файла Алина 6.jpg и оно в той же папке -->
+        </div>
+
+        <div class="trip-moment">
+            <h2>Спасибо Светочке!</h2>
+            <p class="trip-description">И, конечно, слава богу, что у нас есть наша любимая Светочка! Мы, конечно, заставляли ее торопиться и нахаживать с нами километры, но благодаря ей у нас всегда было уютное жилье. Спасибо ей за терпение и компанию!</p>
+            <div class="image-pair">
+                <img src="Алина 9.jpg" alt="Со Светой 1"> 
+                <img src="Алина 10.jpg" alt="Со Светой 2">
+                <!-- Убедитесь, что имена файлов Алина 9.jpg и Алина 10.jpg и они в той же папке -->
+            </div>
+        </div>
+
+        <p style="text-align: center; font-style: italic; margin-top: 30px;">На этом я думаю что пока что можно закончить!! Бай-бай ❤️</p>
+
+        <div class="link-container">
+            <a href="index.html">Вернуться на Главную</a>
+<a href="stranica1.html.html">Перейти на Страничку 1</a>
+
+        </div>
+    </div>
+</body>
+</html>
